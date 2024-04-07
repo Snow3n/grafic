@@ -106,7 +106,7 @@ export function Component() {
               відключення за вашою адресою.
             </p>
           </div>
-          <div className="container flex items-start gap-4 md:gap-8">
+          <div className="container flex flex-col lg:flex-row items-start gap-4 md:gap-8">
             <Card className="w-full max-w-[400px] divide-y">
               <CardContent className="p-4 md:p-6 space-y-4">
                 <div className="space-y-2">
