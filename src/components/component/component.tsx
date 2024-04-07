@@ -124,7 +124,7 @@ export function Component() {
                   <ShieldCheckIcon className="w-5 h-5" />У вашому регіоні немає
                   повідомлень про відключення електроенергії
                 </div> */}
-                <Button size="sm" variant="text">
+                <Button size="sm" /*variant="text"*/>
                   Зберегти адресу
                 </Button>
               </CardContent>
@@ -132,25 +132,24 @@ export function Component() {
             {
               // Add a card with the following content if there are any outages
               // outages.data.isOutage ? (
-                searchResult.map((element) => (
-
+              searchResult.map((element: any, index: number) => (
                 // !loading ? (
-                  <Card className="w-full max-w-[400px] divide-y">
-                    <CardContent className="p-4 md:p-6 space-y-4">
-                      <div className="space-y-2">
-                        <h3 className="text-lg font-semibold">
-                          {element.street}
-                        </h3>
-                        <p className="text-sm text-gray-500">
-                          {outages.data.message}
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
+                <Card key={index} className="w-full max-w-[400px] divide-y">
+                  <CardContent className="p-4 md:p-6 space-y-4">
+                    <div className="space-y-2">
+                      <h3 className="text-lg font-semibold">
+                        {element.street}
+                      </h3>
+                      <p className="text-sm text-gray-500">
+                        {outages.data.message}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
                 // ) : (
-                  // Spinner()
+                // Spinner()
                 // )
-                ))
+              ))
               // ) : (
               //   <div className="w-full max-w-[400px]">
               //     <Card className="w-full max-w-[400px] divide-y">
@@ -248,7 +247,7 @@ export function Component() {
   );
 }
 
-function ShieldCheckIcon(props) {
+function ShieldCheckIcon(props: any) {
   return (
     <svg
       {...props}
