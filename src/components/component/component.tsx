@@ -124,9 +124,7 @@ export function Component() {
                   <ShieldCheckIcon className="w-5 h-5" />У вашому регіоні немає
                   повідомлень про відключення електроенергії
                 </div> */}
-                <Button size="sm" /*variant="text"*/>
-                  Зберегти адресу
-                </Button>
+                <Button size="sm" /*variant="text"*/>Зберегти адресу</Button>
               </CardContent>
             </Card>
             {
